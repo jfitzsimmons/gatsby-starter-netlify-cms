@@ -8,4 +8,6 @@ featuredimage: /img/screenshot.png
 tags:
   - test
 ---
-This is the body of my new blog post.  I didn't choose an image or make it featured.  Featured and image were required.
+![basic image](/img/chemex.jpg "Tis is the image title test jpf")
+
+This is the body of my new blog post.  I didn't choose an image or make it featured.  Featured and image were required.  I didn't realize i need to add an image here too.  Makes sense.
