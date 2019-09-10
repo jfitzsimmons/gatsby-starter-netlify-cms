@@ -6,8 +6,9 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import SlideShow from "../components/SlideShow"
 
-export const ProductPageTemplate = ({
+export const ProjectPageTemplate = ({
   image,
   title,
   heading,
@@ -39,6 +40,7 @@ export const ProductPageTemplate = ({
         {title}
       </h2>
     </div>
+    <SlideShow />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -104,7 +106,7 @@ export const ProductPageTemplate = ({
   </div>
 )
 
-ProductPageTemplate.propTypes = {
+ProjectPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -128,12 +130,12 @@ ProductPageTemplate.propTypes = {
   }),
 }
 
-const ProductPage = ({ data }) => {
+const ProjectPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <ProductPageTemplate
+      <ProjectPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -148,7 +150,7 @@ const ProductPage = ({ data }) => {
   )
 }
 
-ProductPage.propTypes = {
+ProjectPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -156,10 +158,10 @@ ProductPage.propTypes = {
   }),
 }
 
-export default ProductPage
+export default ProjectPage
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+export const projectPageQuery = graphql`
+  query ProjectPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

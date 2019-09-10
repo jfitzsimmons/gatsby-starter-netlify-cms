@@ -6,7 +6,6 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import SlideShow from "../components/SlideShow"
 
 export const ProductPageTemplate = ({
   image,
@@ -40,7 +39,6 @@ export const ProductPageTemplate = ({
         {title}
       </h2>
     </div>
-    <SlideShow />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
