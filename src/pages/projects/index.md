@@ -1,6 +1,5 @@
 ---
-templateKey: 'project-page'
-path: /projects
+templateKey: project-page
 title: Joe's SlideShow
 image: /img/jumbotron.jpg
 heading: I hope this Title is changed
@@ -8,6 +7,9 @@ description: >-
   Vitae rem impedit aut ab vitae odit. Et labore qui soluta deleniti harum.
   Provident aliquid nisi praesentium saepe dicta doloribus temporibus quaerat.
   Odit ratione asperiores volupta…
+slides:
+  - image: /img/screenshot.png
+    text: My first test slide
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -81,3 +83,4 @@ pricing:
       plan: Custom
       price: EXPENSIVE
 ---
+
