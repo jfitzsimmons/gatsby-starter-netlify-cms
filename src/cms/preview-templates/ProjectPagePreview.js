@@ -7,7 +7,7 @@ const ProjectPagePreview = ({ entry, getAsset }) => {
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
   const entrySlides = entry.getIn(['data', 'slides'])
-  const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
+  const slides = entrySlides ? entrySlides.toJS() : []
 
   const entryTestimonials = entry.getIn(['data', 'testimonials'])
   const testimonials = entryTestimonials ? entryTestimonials.toJS() : []
