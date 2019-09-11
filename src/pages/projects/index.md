@@ -1,6 +1,5 @@
 ---
-templateKey: 'project-page'
-path: /projects
+templateKey: project-page
 title: Joe's SlideShow
 image: /img/jumbotron.jpg
 heading: I hope this Title is changed
