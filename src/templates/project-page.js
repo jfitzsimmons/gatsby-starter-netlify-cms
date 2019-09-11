@@ -115,10 +115,7 @@ ProjectPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-  slides: PropTypes.shape({
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    text: PropTypes.string,
-  }),
+  slides: PropTypes.array,
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
