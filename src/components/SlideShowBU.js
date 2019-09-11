@@ -1,8 +1,13 @@
-import React from 'react'
-//import { useStaticQuery, graphql } from "gatsby"
-//import Img from "gatsby-image"
-import PropTypes from 'prop-types'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import { Link } from 'gatsby'
+
+import logo from '../img/logo.svg'
+import facebook from '../img/social/facebook.svg'
+import instagram from '../img/social/instagram.svg'
+import twitter from '../img/social/twitter.svg'
+import vimeo from '../img/social/vimeo.svg'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -15,68 +20,6 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
- const SlideShow = ({ slides }) => (
-
-   <div className="columns">
-     {slides.map(item => (
-       <div key={item.text} className="column">
-         <div>
-           <PreviewCompatibleImage imageInfo={item} />
-         </div>
-         <div>
-
-         </div>
-       </div>
-     ))}
-   </div>
-
-   /**
-   <div className="columns is-multiline">
-     {slides.map(item => (
-       <div key={item.text} className="column is-6">
-         <section className="section">
-           <div className="has-text-centered">
-             <div
-               style={{
-                 width: '240px',
-                 display: 'inline-block',
-               }}
-             >
-               <PreviewCompatibleImage imageInfo={item} />
-             </div>
-           </div>
-           <p>{item.text}</p>
-         </section>
-       </div>
-     ))}
-   </div>
-*/
-
- )
-
-
-
-
- SlideShow.propTypes = {
-   slides: PropTypes.arrayOf(
-     PropTypes.shape({
-       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-       text: PropTypes.string,
-     })
-   ),
- }
-
-
-
-
-
-
-
-
-
-
-
-/**
 function SlideShow() {
   const [index, setIndex] = useState(0)
   const { allFile } = useStaticQuery(
@@ -126,5 +69,4 @@ function SlideShow() {
     </div>
   )
 }
-*/
 export default SlideShow

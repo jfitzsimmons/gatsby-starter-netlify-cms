@@ -14,6 +14,7 @@ export const ProjectPageTemplate = ({
   heading,
   description,
   intro,
+  slides,
   main,
   testimonials,
   fullImage,
@@ -40,7 +41,7 @@ export const ProjectPageTemplate = ({
         {title}
       </h2>
     </div>
-    <SlideShow />
+    <SlideShow slides={slides}/>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -114,6 +115,10 @@ ProjectPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  slides: PropTypes.shape({
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    text: PropTypes.string,
+  }),
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
@@ -141,6 +146,7 @@ const ProjectPage = ({ data }) => {
         heading={frontmatter.heading}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        slides={frontmatter.slides}
         main={frontmatter.main}
         testimonials={frontmatter.testimonials}
         fullImage={frontmatter.full_image}
@@ -187,6 +193,16 @@ export const projectPageQuery = graphql`
           }
           heading
           description
+        }
+        slides {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          text
         }
         main {
           heading
