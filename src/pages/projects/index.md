@@ -7,9 +7,6 @@ description: >-
   Vitae rem impedit aut ab vitae odit. Et labore qui soluta deleniti harum.
   Provident aliquid nisi praesentium saepe dicta doloribus temporibus quaerat.
   Odit ratione asperiores volupta…
-slides:
-  - image: /img/screenshot.png
-    text: My first test slide
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -33,6 +30,11 @@ intro:
   heading: What we offer
   description: |
     what does this description got to?
+slides:
+  - image: /img/screenshot.png
+    text: My first test slide
+  - image: /img/chemex.jpg
+    text: chemex image
 main:
   heading: The Main - so important
   description: |
