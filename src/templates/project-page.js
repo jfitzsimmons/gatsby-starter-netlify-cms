@@ -41,7 +41,7 @@ export const ProjectPageTemplate = ({
         {title}
       </h2>
     </div>
-    <SlideShow slides={slides}/>
+    <SlideShow slides={slides} autoplay={3000} infinite={true}/>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
