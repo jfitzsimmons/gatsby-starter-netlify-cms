@@ -2,11 +2,10 @@
 templateKey: project-page
 title: Development for the Web
 image: /img/projectbackground.jpg
-heading: I hope this Title is changed
+heading: Projects
 description: >-
-  Vitae rem impedit aut ab vitae odit. Et labore qui soluta deleniti harum.
-  Provident aliquid nisi praesentium saepe dicta doloribus temporibus quaerat.
-  Odit ratione asperiores volupta…
+  I contribute, make an impact, am a resource and help a positive environment. I
+  solve problems, fix bugs, come up with ideas and improve products. I adapt.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -31,16 +30,22 @@ intro:
   description: |
     what does this description got to?
 slides:
-  - image: /img/screenshot.png
-    text: will sydney show up in prod for new slide
-  - image: /img/coffee-gear.png
-    text: >
-      We offer a small, but carefully curated selection of brewing gear and
-      tools for every taste and experience level. No matter if you roast your
-      own beans or just bought your first french press, you’ll find a gadget to
-      fall in love with in our shop.
-  - image: /img/joe.jpg
-    text: My giant face
+  - image: /img/winetable.jpg
+    text: >-
+      Get wines from the database, display them on the screen, and when the user
+      hovers over one of the rows, the note for that wine is displayed in its
+      own section.
+  - image: /img/artapi.jpg
+    text: >-
+      A demo using the React Library with multiple external APIs. Style,
+      Information and GPS are all contextual, based on one or more search terms
+      for paintings.
+  - image: /img/codeadventuregame.jpg
+    text: An idea for a music related coding game
+  - image: /img/cloudgenerator.jpg
+    text: >-
+      Adjusts grouping, color and location of 100 dots that form a cloud.
+      Loosely based on actual clouds. Work in progress.
 main:
   heading: The Main - so important
   description: |
