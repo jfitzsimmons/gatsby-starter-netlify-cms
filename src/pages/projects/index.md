@@ -1,7 +1,7 @@
 ---
 templateKey: project-page
-title: Joe's SlideShow
-image: /img/jumbotron.jpg
+title: Development for the Web
+image: /img/projectbackground.jpg
 heading: I hope this Title is changed
 description: >-
   Vitae rem impedit aut ab vitae odit. Et labore qui soluta deleniti harum.
