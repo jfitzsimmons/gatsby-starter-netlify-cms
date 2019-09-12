@@ -65,13 +65,6 @@ const SlideShow = class extends React.Component {
   		}
   	}
 
-  	componentWillReceiveProps(props) {
-  		this.slideCount = this.props.slides;
-  		if (this.state.currentSlideIndex >= this.slideCount) {
-  			this.setState({ currentSlideIndex: 0 });
-  		}
-  	}
-
   	setupAutoplay = () => {
   		if (this.props.autoplay && !this.isMouseOver) {
   			this.stopAutoplay();
@@ -290,12 +283,8 @@ const SlideShow = class extends React.Component {
   render() {
 
     const {
-			children,
-			className = 'slider',
 			previousButton = <Arrow direction={this.direction === HORIZONTAL ? 'left' : 'down'} />,
 			nextButton = <Arrow direction={this.direction === HORIZONTAL ? 'right' : 'up'} />,
-			touchDisabled,
-			autoplay,
 		} = this.props;
 		const classNames = this.getClassNames();
 		const isDisabled = this.isDisabled();
@@ -309,18 +298,18 @@ const SlideShow = class extends React.Component {
 <div>
 <div className="slider-wrapper">
 
-				<a
+				<span
 					onClick={this.previous}
 					className={`${classNames.previousButton}${isDisabled || !this.canGoPrevious() ? ` ${classNames.buttonDisabled}` : ''}`}
 				>
 					{previousButton}
-				</a>
-				<a
+				</span>
+				<span
 					onClick={this.next}
 					className={`${classNames.nextButton}${isDisabled || !this.canGoNext() ? ` ${classNames.buttonDisabled}` : ''}`}
 				>
 					{nextButton}
-				</a>
+				</span>
 				<div className={classNames.track}>
           {this.props.slides.map((item, i)=> (
 

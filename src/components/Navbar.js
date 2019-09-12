@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import stackoverflow from '../img/stackoverflow-icon.svg'
+import codepen from '../img/codepen-icon.svg'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -35,14 +36,14 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-dark"
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              &#123;&#123; J &#125;&#125;
             </Link>
             {/* Hamburger menu */}
             <div
@@ -63,8 +64,8 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/about">
                 About
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+              <Link className="navbar-item" to="/projects">
+                Projects
               </Link>
               <Link className="navbar-item" to="/blog">
                 Blog
@@ -79,7 +80,31 @@ const Navbar = class extends React.Component {
             <div className="navbar-end has-text-centered">
               <a
                 className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                href="https://stackoverflow.com/users/10241361/joe-fitzsimmons"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon">
+                  <img src={stackoverflow} alt="Github" />
+                </span>
+              </a>
+            </div>
+            <div className="navbar-end has-text-centered">
+              <a
+                className="navbar-item"
+                href="https://codepen.io/jfitzsimmons"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon">
+                  <img src={codepen} alt="CodePen" />
+                </span>
+              </a>
+            </div>
+            <div className="navbar-end has-text-centered">
+              <a
+                className="navbar-item"
+                href="https://github.com/jfitzsimmons"
                 target="_blank"
                 rel="noopener noreferrer"
               >

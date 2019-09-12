@@ -1,4 +1,5 @@
-@import "~bulma/sass/utilities/initial-variables"
+
+@import url('https://fonts.googleapis.com/css?family=Lora:700,400|Inconsolata:700,400|Arimo:700,400');
 
 =transform($property)
   -webkit-transform: $property
@@ -14,9 +15,24 @@ $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
+$darker-purple:  #28112c
+
+$family-sans-serif: 'Arimo', sans-serif
+$family-sans: 'Lora', serif
+
+@import "~bulma/sass/utilities/initial-variables"
+
+nav
+  font-family: $family-sans
+
+.navbar.is-dark
+  background: $darker-purple !important
 
 .navbar .navbar-menu
   box-shadow:none !important
+
+h2.is-dark
+  color: #fff !important
 
 .content .taglist
   list-style: none
